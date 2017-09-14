@@ -20,6 +20,10 @@ def install():
 def config_changed():
     log("Entered config_changed", DEBUG)
 
+@hooks.hook('start')
+def start():
+    log("Entered start", DEBUG)
+
 @hooks.hook('update-status')
 def update_status():
     log("Entered update_status", DEBUG)
