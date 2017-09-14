@@ -24,7 +24,7 @@ def config_changed():
 def update_status():
     log("Entered update_status", DEBUG)
 
-@hooks.hook('openstack-api-endpoint-relation-changed')
+@hooks.hook('api-loadbalancer-relation-changed')
 def openstack_api_endpoint_changed(relation_id=None, unit=None):
     log("Entered openstack_api_endpoint_changed", DEBUG)
 
