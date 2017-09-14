@@ -1,0 +1,13 @@
+name: openstack-loadbalancer
+summary: Fake OpenStack Load Balancer
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+description: |
+  Fake OpenStack Load Balancer that uses the openstack-api-endpoint to talk
+  to OpenStack API.
+tags:
+  - openstack
+series:
+  - xenial
+provides:
+  api-loadbalancer:
+    interface: openstack-api-endpoints
