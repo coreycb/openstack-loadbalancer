@@ -39,9 +39,13 @@ def openstack_api_endpoint_changed(relation_id=None, unit=None):
         for k, v in incoming_data.items():
             log("  {}: {}".format(k, v), DEBUG)
 
-        log("Setting relation data:", DEBUG)
-        outgoing_data = {"floating_ip": "98.34.12.1"}
-        relation_set(**outgoing_data)
+            if "service_type" in k:
+                floating_ip_key = ("{}_floating_ip".format(v))
+                floating_ip = "98.34.12.1"
+                outgoing_data = {floating_ip_key: floating_ip}
+                log("Setting relation data:", DEBUG)
+                log("  {}: {}".format(floating_ip_key, floating_ip), DEBUG)
+                relation_set(**outgoing_data)
     else:
         log("No incoming data", DEBUG)
 
