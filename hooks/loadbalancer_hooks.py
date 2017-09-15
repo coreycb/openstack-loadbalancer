@@ -41,7 +41,7 @@ def openstack_api_endpoint_changed(relation_id=None, unit=None):
 
         log("Setting relation data:", DEBUG)
         outgoing_data = {"floating_ip": "98.34.12.1"}
-        relation_set(relation_id=rel_id, **outgoing_data)
+        relation_set(**outgoing_data)
     else:
         log("No incoming data", DEBUG)
 
