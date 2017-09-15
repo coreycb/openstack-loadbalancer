@@ -5,6 +5,7 @@ import sys
 from charmhelpers.core.hookenv import (
     Hooks,
     DEBUG,
+    UnregisteredHookError,
     log,
     relation_get,
     relation_set,
