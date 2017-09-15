@@ -36,7 +36,7 @@ def openstack_api_endpoint_changed(relation_id=None, unit=None):
     log("Getting relation data:", DEBUG)
     incoming_data = relation_get()
     if incoming_data:
-        for k, v in incoming_data.iteritems():
+        for k, v in incoming_data.items():
             log("  {}: {}".format(k, v), DEBUG)
 
         log("Setting relation data:", DEBUG)
